@@ -1,20 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Slot } from 'expo-router';
 import React from 'react';
+import { Text } from 'react-native';
 
 const RootLayout = () => {
   return (
-    <View style={styles.container}>
-      <Text>RootLayout</Text>
-    </View>
+    <>
+      <Text>Header</Text>
+      <Slot />
+      <Text>Footer</Text>
+    </>
   );
 };
 
 export default RootLayout;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
